@@ -7,8 +7,8 @@
 
 ### 🤖 সম্পূর্ণ স্মার্ট WhatsApp AI চ্যাটবট — প্রশ্ন, ছবি তৈরি, সবকিছু!
 
-[![Version](https://img.shields.io/badge/Version-3.0.0-00d4ff?style=for-the-badge&color=00d4ff)](package.json)
-[![License](https://img.shields.io/badge/License-MIT-aa66ff?style=for-the-badge&color=aa66ff)](package.json)
+[![Version](https://img.shields.io/badge/Version-2.1.0-00d4ff?style=for-the-badge&color=00d4ff)](package.json)
+[![License](https://img.shields.io/badge/License-ISC-aa66ff?style=for-the-badge&color=aa66ff)](package.json)
 [![Language](https://img.shields.io/badge/Language-Bangla%20%26%20English-00ffaa?style=for-the-badge&color=00ffaa)](index.js)
 [![Made by RASHD](https://img.shields.io/badge/Made%20by-RASHD-ff55f7?style=for-the-badge&color=ff55f7)](https://t.me/v4zrasehd)
 
@@ -187,5 +187,5 @@ A: ড্যাশবোর্ডে **RESET SESSION** বাটনে ক্ল
 
 ---
 
-`<RASHD Chatbot — v3.0.0>`
+`<RASHD Chatbot — v2.1.0>`
 </div>

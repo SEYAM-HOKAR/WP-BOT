@@ -13,7 +13,7 @@ services:
       - key: NODE_ENV
         value: production
       # Set this to your Render service URL after first deploy
-      # e.g. https://rashd-the-ai.onrender.com
+      # e.g. https://rashd-chatbot.onrender.com
       # This enables self-ping to prevent free-tier sleep
       - key: RENDER_EXTERNAL_URL
         sync: false
