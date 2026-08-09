@@ -75,9 +75,7 @@ draw a cat
 
 ### ধাপ ১: প্রজেক্ট ক্লোন ও নির্ভরতা ইনস্টল
 ```bash
-git clone https://github.com/v4zrashd/rashd-chatbot
-cd rashd-chatbot
-npm install
+https://github.com/v4zrashd/rashd-chatbot.git
 ```
 
 > **নোট:** Render-এ ডিপ্লয় করতে `npm install --omit=dev` ব্যবহার করুন।
