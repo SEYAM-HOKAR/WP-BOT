@@ -82,7 +82,7 @@ https://github.com/v4zrashd/rashd-chatbot.git
 
 ### ধাপ ২: এনভায়রনমেন্ট সেটআপ
 ```bash
-cp .env.example .env
+npm install --omit=dev
 ```
 `.env` ফাইলে আপনার প্রি-ফারেন্স অনুযায়ী পরিবর্তন করুন:
 ```env
