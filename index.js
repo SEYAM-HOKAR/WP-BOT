@@ -379,7 +379,7 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 <body>
 
 <div class="header">
-  <div class="logo">RTA</div>
+  <div class="logo">A C S</div>
   <div>
     <div class="title">ACS THE AI</div>
     <div class="subtitle">⚡ WhatsApp Bot Terminal ⚡</div>
