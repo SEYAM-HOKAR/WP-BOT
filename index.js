@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 const AUTH_DIR = process.env.AUTH_DIR || path.join(__dirname, 'auth_info');
 
 // ── RASHD THE AI System Prompt ──
-const SYSTEM_PROMPT = `তুমি হলে "RASHD THE AI" — একজন বন্ধু এবং সাহায্যকারী।
+const SYSTEM_PROMPT = `তুমি হলে "ACS THE AI" — একজন বন্ধু এবং সাহায্যকারী।
 
 তোমার ব্যক্তিত্ব:
 - তুমি ব্যবহারকারীর একজন বিশ্বস্ত বন্ধু এবং সব সময় সাহায্যের জন্য প্রস্তুত।
@@ -29,7 +29,7 @@ const SYSTEM_PROMPT = `তুমি হলে "RASHD THE AI" — একজন �
 সর্বদা সংক্ষিপ্ত, পরিষ্কার ও সহায়ক উত্তর দাও। মিথ্যা তথ্য দিও না — না জানলে সরাসরি বলে দাও।`;
 
 // ── State ──
-let logs      = ['🚀 RASHD THE AI starting up...'];
+let logs      = ['🚀 ACS THE AI starting up...'];
 let pairingCode  = null;
 let waConnected  = false;
 let waSocket     = null;
@@ -109,7 +109,7 @@ async function fetchImageBuffer(prompt, attempts = 4) {
             const res = await axios.get(url, {
                 responseType: 'arraybuffer',
                 timeout: 90_000,
-                headers: { 'User-Agent': 'RASHD-THE-AI/2.0' },
+                headers: { 'User-Agent': 'ACS-THE-AI/2.0' },
             });
             if (res.data && res.data.byteLength > 1000) return Buffer.from(res.data);
             throw new Error('empty image response');
@@ -140,7 +140,7 @@ app.get('/health', (_req, res) => {
 // ── API: status ──
 app.get('/api/status', (_req, res) => {
     res.json({
-        name: 'RASHD THE AI',
+        name: 'ACS THE AI',
         whatsapp: waConnected ? 'connected' : (waStarting ? 'pairing' : 'offline'),
         phoneNumber: waPhoneNumber,
         pairingCode,
@@ -212,7 +212,7 @@ app.get('/', (_req, res) => {
         <div class="card">
             <h3>📱 WhatsApp Bot Login</h3>
             <p class="muted">Country code সহ আপনার WhatsApp নম্বর দিন (+ ছাড়া)।<br>
-            উদাহরণঃ <code>8801712345678</code></p>
+            উদাহরণঃ <code>8801323850908</code></p>
             <div id="waForm">
                 <input id="phone" type="tel" inputmode="numeric"
                     placeholder="8801XXXXXXXXX" maxlength="15" />
@@ -235,7 +235,7 @@ app.get('/', (_req, res) => {
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 <meta name="theme-color" content="#05070d"/>
-<title>RASHD THE AI — WhatsApp Bot Terminal</title>
+<title>ACS THE AI — WhatsApp Bot Terminal</title>
 <meta http-equiv="refresh" content="${refreshSec}"/>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
@@ -381,7 +381,7 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 <div class="header">
   <div class="logo">RTA</div>
   <div>
-    <div class="title">RASHD THE AI</div>
+    <div class="title">ACS THE AI</div>
     <div class="subtitle">⚡ WhatsApp Bot Terminal ⚡</div>
   </div>
 </div>
@@ -408,7 +408,7 @@ ${formBlock}
 <div class="terminal-wrap">
   <div class="terminal-bar">
     <span class="dot"></span><span class="dot y"></span><span class="dot g"></span>
-    <span class="label">rashd@ai:~$</span>
+    <span class="label">tanvir@ai:~$</span>
   </div>
   <div class="terminal">${logHTML}</div>
 </div>
@@ -416,9 +416,9 @@ ${formBlock}
 ${resetBlock}
 
 <div class="footer">
-  <div class="dev">『 R A S H D 』</div>
-  <a href="https://t.me/v4zrasehd" target="_blank" rel="noopener">📩 t.me/v4zrasehd</a>
-  <div class="tag">DEVELOPED · MAINTAINED · POWERED BY RASHD</div>
+  <div class="dev">『 T A V I R 』</div>
+  <a href="https://t.me/ACSTANVIRAHMED" target="_blank" rel="noopener">📩 t.me/ACSTANVIRAHMED</a>
+  <div class="tag">DEVELOPED ·ACS TANVIR AHMED</div>
 </div>
 
 <script>
@@ -453,7 +453,7 @@ document.getElementById('phone') &&
 
 // ── Server startup ──
 app.listen(PORT, '0.0.0.0', () => {
-    pushLog(`✅ RASHD THE AI terminal running on port ${PORT}`);
+    pushLog(`✅ ACS THE AI terminal running on port ${PORT}`);
     pushLog(`📁 Auth directory: ${AUTH_DIR}`);
 
     // Auto-resume if auth session exists
@@ -559,7 +559,7 @@ async function startWhatsAppBot() {
             waStarting        = false;
             pairingCode       = null;
             reconnectAttempts = 0;
-            pushLog('🎊 RASHD THE AI is ONLINE on WhatsApp!');
+            pushLog('🎊 ACS THE AI is ONLINE on WhatsApp!');
         }
 
         if (connection === 'close') {
@@ -639,7 +639,7 @@ async function startWhatsAppBot() {
                     await stopTyping();
                     await sock.sendMessage(jid, {
                         image: buffer,
-                        caption: `🎨 "${imgPrompt}"\n\n— RASHD THE AI\n👨‍💻 Dev: 『 R A S H D 』 t.me/v4zrasehd`,
+                        caption: `🎨 "${imgPrompt}"\n\n— ACS THE AI\n👨‍💻 Dev: 『 T A N V I R 』 t.me/ACSTANVIRAHMED`,
                     });
                     pushLog('🖼️ Image sent.');
                 } catch (imgErr) {
